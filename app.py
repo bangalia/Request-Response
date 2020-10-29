@@ -7,3 +7,7 @@ def homepage():
     return 'Are you there, world? It\'s me, Ducky!'
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/penguins')
+def penguins():
+    return 'Penguins are cute!'
