@@ -5,8 +5,6 @@ app = Flask(__name__)
 def homepage():
     """Shows a greeting to the user."""
     return 'Are you there, world? It\'s me, Ducky!'
-if __name__ == '__main__':
-    app.run(debug=True)
 
 @app.route('/penguins')
 def penguins():
@@ -33,5 +31,7 @@ def multiply(number1,number2):
     """Display the result of two numbers entered by user multiplied"""
     answer = number1 * number2
     result = answer.isdigit
-    return f'{number1} times {number2} is {result}'
+    return f'{number1} times {number2} is {result}'   
     
+if __name__ == '__main__':
+    app.run(debug=True)
